@@ -57,6 +57,7 @@ class Fluttertoast {
     ToastGravity? gravity,
     Color? backgroundColor,
     Color? textColor,
+    String? fontWeight,
     bool webShowClose = false,
     webBgColor = "linear-gradient(to right, #00b09b, #96c93d)",
     webPosition = "right",
@@ -82,6 +83,10 @@ class Fluttertoast {
     if (textColor == null) {
       textColor = Colors.white;
     }
+
+    if (fontWeight == null) {
+      fontWeight = 'RobotoCondensed';
+    }
     final Map<String, dynamic> params = <String, dynamic>{
       'msg': msg,
       'length': toast,
@@ -92,7 +97,7 @@ class Fluttertoast {
       'textcolor': textColor.value,
       'iosTextcolor': textColor.value,
       'fontSize': fontSize,
-      'fontFamily': 'RobotoCondensed',
+      'fontFamily': fontWeight,
       'webShowClose': webShowClose,
       'webBgColor': webBgColor,
       'webPosition': webPosition
