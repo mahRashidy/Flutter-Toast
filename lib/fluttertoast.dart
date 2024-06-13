@@ -92,6 +92,7 @@ class Fluttertoast {
       'textcolor': textColor.value,
       'iosTextcolor': textColor.value,
       'fontSize': fontSize,
+      'fontFamily': 'RobotoCondensed',
       'webShowClose': webShowClose,
       'webBgColor': webBgColor,
       'webPosition': webPosition
