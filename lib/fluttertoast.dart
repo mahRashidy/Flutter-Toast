@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 /// Only for Android Platform
 enum Toast {
   /// Show Short toast for 1 sec
+  /// Show Short toast for 1 sec
   LENGTH_SHORT,
 
   /// Show Long toast for 5 sec
