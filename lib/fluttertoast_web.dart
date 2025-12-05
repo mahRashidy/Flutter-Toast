@@ -3,6 +3,7 @@ import 'package:web/web.dart' as web;
 import 'dart:ui_web' as ui;
 import 'package:flutter/services.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
+import 'dart:js_interop';
 
 /// Plugin Class to show a toast message on screen for web
 class FluttertoastWebPlugin {
@@ -124,7 +125,7 @@ class FluttertoastWebPlugin {
     }
     final web.HTMLScriptElement scriptText = web.HTMLScriptElement()
       ..id = "toast-content"
-      ..innerHTML = content;
+      ..innerHTML = content.toJS;
     web.document.body!.append(scriptText);
     if (textColor != null) {
       web.Element toast = web.document.querySelector('.toastify')!;
